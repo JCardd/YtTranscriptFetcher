@@ -1,16 +1,39 @@
-# YtTranscriptFetcher
+# YouTube Transcript Downloader
 
-A Python script that utilizes the YouTube Transcript API library to fetch the transcript of a YouTube video and write it into a text file.
+A Python script that utilizes the `youtube_transcript_api` library to fetch the transcript (captions) of a YouTube video and write it into a text file.
 
-Before using it:
+## Features
 
-- Make sure you have Python3 installed on your computer.
-- Make sure you have the youtube_transcript_api library downloaded on your computer.
-  - If not go to your commands prompt or Terminal and type the following command: pip3 install youtube_transcript_api
-  
-To use the script, download or clone this repository, then navigate to the directory where this script is located using the command prompt or Terminal. Then from here, run the following command: python scriptName.py <youtubeUrl>
+- Fetches publicly available transcripts for YouTube videos.
+- Supports various YouTube URL formats (e.g., `watch?v=`, `youtu.be/`, `/embed/`).
+- Attempts to handle URLs pasted directly into shells that might auto-escape special characters (like `?` becoming `\?`).
+- Allows specifying a custom output file name.
+- Outputs the transcript as plain text, with each segment typically on a new line.
 
-Replacing scriptName.py with the actual name of the script, and <youtubeUrl> with the URL of the video whose transcript you want to get.
-Remember to embed the Youtube URL in quotes, so it would look something like this: python3 scriptName.py "<youtubeUrl>"
+## Prerequisites
 
-The .txt file of this repository shows the transcript of [the following YouTube video](https://www.youtube.com/watch?v=zhWDdy_5v2w). 
+1.  **Python 3:** Make sure you have Python 3 installed on your computer. You can check by running `python3 --version`.
+2.  **`youtube_transcript_api` library:** This script depends on the `youtube_transcript_api` library.
+
+## Installation
+
+If you don't have the required library installed, open your command prompt or terminal and run:
+
+```bash
+pip3 install youtube_transcript_api
+```
+
+## Usage
+
+Navigate to the directory where the transcript.py script is located using your command prompt or terminal.
+Then, run the script using the following format:
+
+python3 transcript.py <youtubeURL> [OPTIONS]
+
+Where <youtubeURL> is the link to the YouTube video you want the transcript of.
+
+## Options
+
+- -o <filename> or --output <filename>: Specify a name for the output transcript file. If omitted, the transcript will be saved to transcript.txt by default.
+
+The .txt file of this repository shows the transcript of [the following YouTube video](https://www.youtube.com/watch?v=zhWDdy_5v2w).
