@@ -28,9 +28,11 @@ pip3 install youtube_transcript_api
 Navigate to the directory where the transcript.py script is located using your command prompt or terminal.
 Then, run the script using the following format:
 
+```bash
 python3 transcript.py <youtubeURL> [OPTIONS]
+```
 
-Where <youtubeURL> is the link to the YouTube video you want the transcript of.
+Where youtubeURL is the link to the YouTube video you want the transcript of.
 
 ## Options
 
